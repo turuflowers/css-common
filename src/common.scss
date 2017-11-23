@@ -1,0 +1,468 @@
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+// font sizes
+
+@for $i from 8 through 180 {
+  .fs-#{$i} { font-size: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from 8 through 100 {
+    .fs-#{$i}-xs { font-size: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  @for $i from 8 through 100 {
+    .fs-#{$i}-sm { font-size: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  @for $i from 8 through 100 {
+    .fs-#{$i}-md { font-size: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  @for $i from 8 through 100 {
+    .fs-#{$i}-lg { font-size: #{$i}px; }
+  }
+}
+
+// letter spacing
+@for $i from -10 through -1 {
+  .ls-m#{-$i} { letter-spacing: #{$i}px; }
+}
+
+@for $i from 0 through 10 {
+  .ls-#{$i} { letter-spacing: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from -10 through -1 {
+    .ls-m#{-$i}-xs { letter-spacing: #{$i}px; }
+  }
+  @for $i from 0 through 10 {
+    .ls-#{$i}-xs { letter-spacing: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  @for $i from -10 through -1 {
+    .ls-m#{-$i}-sm { letter-spacing: #{$i}px; }
+  }
+  @for $i from 0 through 10 {
+    .ls-#{$i}-sm { letter-spacing: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  @for $i from -10 through -1 {
+    .ls-m#{-$i}-md { letter-spacing: #{$i}px; }
+  }
+  @for $i from 0 through 10 {
+    .ls-#{$i}-md { letter-spacing: #{$i}px; }
+  }
+}
+
+// line height
+@for $i from 8 through 90 {
+  .lh-#{$i} { line-height: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from 8 through 100 {
+    .lh-#{$i}-xs { line-height: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  @for $i from 8 through 100 {
+    .lh-#{$i}-sm { line-height: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  @for $i from 8 through 100 {
+    .lh-#{$i}-md { line-height: #{$i}px; }
+  }
+}
+
+// margin top
+@for $i from -200 through -1 {
+  .mt-m#{-$i} { margin-top: #{$i}px; }
+}
+
+@for $i from 0 through 200 {
+  .mt-#{$i} { margin-top: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from -200 through -1 {
+    .mt-m#{-$i}-xs { margin-top: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .mt-#{$i}-xs { margin-top: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  @for $i from -200 through -1 {
+    .mt-m#{-$i}-sm { margin-top: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .mt-#{$i}-sm { margin-top: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  @for $i from -200 through -1 {
+    .mt-m#{-$i}-md { margin-top: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .mt-#{$i}-md { margin-top: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  @for $i from -200 through -1 {
+    .mt-m#{-$i}-lg { margin-top: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .mt-#{$i}-lg { margin-top: #{$i}px; }
+  }
+}
+
+// margin bottom
+@for $i from -200 through -1 {
+  .mb-m#{-$i} { margin-bottom: #{$i}px; }
+}
+
+@for $i from 0 through 200 {
+  .mb-#{$i} { margin-bottom: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from -200 through -1 {
+    .mb-m#{-$i}-xs { margin-bottom: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .mb-#{$i}-xs { margin-bottom: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  @for $i from -200 through -1 {
+    .mb-m#{-$i}-sm { margin-bottom: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .mb-#{$i}-sm { margin-bottom: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  @for $i from -200 through -1 {
+    .mb-m#{-$i}-md { margin-bottom: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .mb-#{$i}-md { margin-bottom: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  @for $i from -200 through -1 {
+    .mb-m#{-$i}-lg { margin-bottom: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .mb-#{$i}-lg { margin-bottom: #{$i}px; }
+  }
+}
+
+// padding top
+@for $i from -200 through -1 {
+  .pt-m#{-$i} { padding-top: #{$i}px; }
+}
+
+@for $i from 0 through 200 {
+  .pt-#{$i} { padding-top: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from -200 through -1 {
+    .pt-m#{-$i}-xs { padding-top: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .pt-#{$i}-xs { padding-top: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  @for $i from -200 through -1 {
+    .pt-m#{-$i}-sm { padding-top: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .pt-#{$i}-sm { padding-top: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  @for $i from -200 through -1 {
+    .pt-m#{-$i}-md { padding-top: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .pt-#{$i}-md { padding-top: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  @for $i from -200 through -1 {
+    .pt-m#{-$i}-lg { padding-top: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .pt-#{$i}-lg { padding-top: #{$i}px; }
+  }
+}
+
+// padding bottom
+@for $i from -200 through -1 {
+  .pb-m#{-$i} { padding-bottom: #{$i}px; }
+}
+
+@for $i from 0 through 200 {
+  .pb-#{$i} { padding-bottom: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from -200 through -1 {
+    .pb-m#{-$i}-xs { padding-bottom: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .pb-#{$i}-xs { padding-bottom: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  @for $i from -200 through -1 {
+    .pb-m#{-$i}-sm { padding-bottom: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .pb-#{$i}-sm { padding-bottom: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  @for $i from -200 through -1 {
+    .pb-m#{-$i}-md { padding-bottom: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .pb-#{$i}-md { padding-bottom: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  @for $i from -200 through -1 {
+    .pb-m#{-$i}-lg { padding-bottom: #{$i}px; }
+  }
+  @for $i from 0 through 200 {
+    .pb-#{$i}-lg { padding-bottom: #{$i}px; }
+  }
+}
+
+// padding right
+@for $i from 10 through 40 {
+  .pr-#{$i} { padding-right: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from 10 through 40 {
+    .pr-#{$i}-xs { padding-right: #{$i}px; }
+  }
+}
+
+// padding left
+@for $i from 10 through 40 {
+  .pl-#{$i} { padding-left: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from 10 through 40 {
+    .pl-#{$i}-xs { padding-left: #{$i}px; }
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.fw-thin {
+  font-weight: 100;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-bold, .fw-700 {
+  font-weight: 700;
+}
+
+.fw-extrabold, .fw-800 {
+  font-weight: 800;
+}
+
+.fw-black, .fw-900 {
+  font-weight: 900;
+}
+
+.cita, .trademark, em {
+  font-style: italic;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-ib {
+  display: inline-block;
+}
+
+.pd-lecture {
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0;
+}
+
+p {
+  margin: 20px 0;
+}
+
+// padding bottom
+.o-10 { opacity: .1 }
+
+.o-20 { opacity: .2 }
+
+.o-30 { opacity: .3 }
+
+.o-40 { opacity: .4 }
+
+.o-50 { opacity: .5 }
+
+.o-60 { opacity: .6 }
+
+.o-70 { opacity: .7 }
+
+.o-80 { opacity: .8 }
+
+.o-90 { opacity: .9 }
+
+.cross {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.unset {
+  text-transform: unset;
+}
+
+.border-top-dotted {
+  border-top: 1px dotted #000;
+}
+
+.border-bottom-dotted {
+  border-bottom: 1px dotted #000;
+}
+
+@media (min-width: $screen-sm) {
+  .row-eq-height {
+    display: flex;
+  }
+}
+
+.td-none {
+  text-decoration: none;
+}
+
+.img-full {
+  width: 100%;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  .content{
+
+  }
+  .vertical-top {
+    align-self: flex-start;
+  }
+
+  .vertical-bottom {
+    align-self: flex-end;
+  }
+}
+
+
