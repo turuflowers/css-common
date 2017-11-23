@@ -1,0 +1,23 @@
+{
+  "name": "css-common",
+  "description": "css-common",
+  "main": "common.min.css",
+  "authors": [
+    "Nicolas Flores <turuflowers@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "common",
+    "class",
+    "scss"
+  ],
+  "homepage": "https://github.com/turuflowers/css-common",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
