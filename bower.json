@@ -2,7 +2,7 @@
   "name": "css-common",
   "version": "0.0.1",
   "description": "css-common",
-  "main": "common.min.css",
+  "main": "dist/common.min.css",
   "authors": [
     "Nicolas Flores <turuflowers@gmail.com>"
   ],
