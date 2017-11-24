@@ -1,5 +1,6 @@
 {
   "name": "css-common",
+  "version": "0.0.1",
   "description": "css-common",
   "main": "common.min.css",
   "authors": [
@@ -18,6 +19,12 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "src",
+    ".gitignore",
+    "bower.json",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
   ]
 }
