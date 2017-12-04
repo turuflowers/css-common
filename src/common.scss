@@ -215,6 +215,66 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
   }
 }
 
+// margin right
+@for $i from 0 through 100 {
+  .mr-#{$i} { margin-right: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from 0 through 100 {
+    .mr-#{$i}-xs { margin-right: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  @for $i from 0 through 100 {
+    .mr-#{$i}-sm { margin-right: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  @for $i from 0 through 100 {
+    .mr-#{$i}-md { margin-right: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  @for $i from 0 through 100 {
+    .mr-#{$i}-lg { margin-right: #{$i}px; }
+  }
+}
+
+
+// margin left
+@for $i from 0 through 100 {
+  .ml-#{$i} { margin-left: #{$i}px; }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from 0 through 100 {
+    .ml-#{$i}-xs { margin-left: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  @for $i from 0 through 100 {
+    .ml-#{$i}-sm { margin-left: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  @for $i from 0 through 100 {
+    .ml-#{$i}-md { margin-left: #{$i}px; }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  @for $i from 0 through 100 {
+    .ml-#{$i}-lg { margin-left: #{$i}px; }
+  }
+}
+
+
 // padding top
 @for $i from -200 through -1 {
   .pt-m#{-$i} { padding-top: #{$i}px; }
