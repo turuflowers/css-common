@@ -40,6 +40,6 @@ gulp.task('serve', () => {
 });
 
 gulp.task('build', () => {
-    runSequence(['compress'], () => {
+    runSequence(['styles', 'compress'], () => {
 });
 });
